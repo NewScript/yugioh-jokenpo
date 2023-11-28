@@ -1,2 +1,4 @@
 Introducao 01:51
 Configurando o projeto base 13:03
+Estruturacao geral 07:41
+
