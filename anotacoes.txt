@@ -1,4 +1,8 @@
 Introducao 01:51
 Configurando o projeto base 13:03
 Estruturacao geral 07:41
-
+Video de fundo 08:52
+Finaliando o container left 11:18
+Construindo o container right 04:34
+Desmarcando elementos do container right 05:55
+03:18

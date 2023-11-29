@@ -8,10 +8,44 @@
 </head>
 <body>
     
-    <div class="bg-video"></div>
+    <div class="bg-video">
+        <video class="video" paused loop muted>
+            <source src="./src/assets/video/yugi.mp4" type="video/mp4" />
+        </video>
+    </div>
     <div class="container">
-        <div class="container__left"></div>
-        <div class="container__right"></div>
+        <div class="container__left framed-golden-2">
+            <div class="score_box frame">
+                <span id="score_points">Wind : 0 | Lose : 0</span>
+            </div>
+            <div class="menu_avatar">
+                <img id="card-image">
+            </div>
+            <div class="card_details frame">
+                <p id="card-name">a</p>
+                <p id="card-type">a</p>
+            </div>
+        </div>
+        <div class="container__right">
+            <div class="card-box__container">
+                <div class="card-box framed" id="computer-cards"></div>
+                <div class="card-versus">
+                    <div class="versus-top">
+                        <div class="card-infield">
+                            <img id="player-field-card">
+                        </div>
+                        <img src="./src/assets/icons/millenium2.png" alt="" srcset="">
+                        <div class="card-infield">
+                            <img id="computer-field-card">
+                        </div>
+                    </div>
+                    <div class="versus-bottom">
+
+                    </div>
+                </div>
+                <div class="card-box framed" id="player-cards"></div>
+            </div>
+        </div>
     </div>
 
     <script defer src="./src/scripts/engine.js"></script>
