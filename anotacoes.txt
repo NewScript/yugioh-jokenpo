@@ -7,3 +7,11 @@ Construindo o container right 04:34
 Demarcando elementos do container right 05:55
 Terminando de estilizar componentes visuais 12:47
 Criando os states da engine 09:13
+Criando a enumeracao de cartas 06:45
+Criando assinatura das funcoes principais 06:56
+Implementar a logica de setar as cartas em campo 14:47
+Ajustando o caminho dos recursos 03:21
+Implementando o mouseover 08:12
+Implementando o setCardFields 06:35
+Implementando o removeAllCards 08:22
+Implementando a logica do duelo 08:53 -
