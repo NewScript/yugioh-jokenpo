@@ -53,9 +53,22 @@ const cardData = [
     }
 ]
 
-const resetDuel = () => {
-    alert('É hora do duelo!!');
+const resetDuel = async () => {
+    state.cardsSprites.avatar.src = '';
+    state.actions.button.style.display = 'none';
+    state.fieldCards.player.style.display = 'none';
+    state.fieldCards.computer.style.display = 'none';
+    state.cardsSprites.name.innerText = 'Selecione';
+    state.cardsSprites.type.innerText = 'um card';
+    init();
 };
+
+async function playAudio( status ){
+    try{
+        const audio = new Audio( `./src/assets/audios/${status}.wav` );
+        audio.play()
+    }catch{}
+}
 
 const getRandomCardId = async () => {
     const randomIndex = Math.floor( Math.random() * cardData.length );
@@ -93,9 +106,39 @@ const setCardsField = async ( cardId ) => {
 
     let duelResults = await checkDuelResults( cardId, computerCardId );
 
-    // await updateScore();
+    await updateScore();
 
-    // await drawButton( duelResults )
+    await drawButton( duelResults )
+}
+
+async function updateScore(){
+    state.score.scoreBox.innerText = `Win : ${state.score.playerScore} | 
+                                        Lose : ${state.score.computerScore}`;
+}
+
+async function drawButton( text ){
+    state.actions.button.innerText = text.toUpperCase();
+    state.actions.button.style.display = 'block';
+}
+
+async function checkDuelResults( playerCardId, computerCardId ){
+
+    let duelResults = 'Draw';    
+    let playerCard = cardData[ playerCardId ];
+
+    if( playerCard.winOf.includes( computerCardId )){
+        duelResults = 'win';
+        state.score.playerScore++;
+    };
+    
+    if( playerCard.loseOf.includes( computerCardId )){
+        duelResults = 'lose';
+        state.score.computerScore++;
+    };
+
+    await playAudio( duelResults );
+
+    return duelResults;    
 }
 
 async function removeAllCardsImages() {
@@ -126,6 +169,9 @@ const drawCards = async ( cardNumbers, fieldSide ) => {
 const init = () => {
     drawCards( 5, state.playerSides.player );
     drawCards( 5, state.playerSides.computer );
+
+    // const bgm = document.getElementById( 'bgm' );
+    // bgm.play()
 };
 
 state.actions.button.addEventListener( 'click', resetDuel );

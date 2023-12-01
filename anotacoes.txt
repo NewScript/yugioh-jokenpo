@@ -14,4 +14,11 @@ Ajustando o caminho dos recursos 03:21
 Implementando o mouseover 08:12
 Implementando o setCardFields 06:35
 Implementando o removeAllCards 08:22
-Implementando a logica do duelo 08:53 -
+Implementando a logica do duelo 08:53
+Implementando efeitos sonoros 10:45
+Refatorando a tela versus 04:36
+Aprendendo a tecnica de extract to method 12:38
+Adicionando um FavIcon 01:48
+Adicionando cursores oersonalizados 02:00
+Colocando uma musica de fundo 02:53
+Até o próximo duelo 01:53

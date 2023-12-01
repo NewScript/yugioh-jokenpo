@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/assets/favicon/Favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./src/styles/main.css">
     <title>Yu-Gi-Oh Jokenpo Edition</title>
 </head>
 <body>
+
+    <audio id="bmg" autoplay volume="'0.3">
+        <source src="./src/assets/audios/egyptian_duel.mp3" type="audio/mp3">
+    </audio>
     
     <div class="bg-video">
         <!-- autoplay no lugar de paused -->
-        <video class="video" paused loop muted>
+        <video class="video" autoplay loop muted>
             <source src="./src/assets/video/yugi.mp4" type="video/mp4" />
         </video>
     </div>
     <div class="container">
         <div class="container__left framed-golden-2">
             <div class="score_box frame">
-                <span id="score_points">Wind : 0 | Lose : 0</span>
+                <span id="score_points">Win : 0 | Lose : 0</span>
             </div>
             <div class="menu_avatar">
                 <img id="card-image">
